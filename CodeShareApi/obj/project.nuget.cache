@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LE7JCr08FuqI8nN6/BQGR26J+Fx0j4rHCX+aKz3SeMNqkmkbiwNAyhVDJdRlPwvyGQRweMX4pPhLMsfCAouZUw==",
+  "dgSpecHash": "Ym5GsBk+11gHUvEaBGw7vZL/2mn4eROsTde5w5lkhWbVCPEFbzOwYXvhR+ORnpzim46fiz5Df+T7zMhff07kyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\olive\\OneDrive\\Dokumente\\VsCode\\CodeShareApi\\CodeShareApi.csproj",
+  "projectFilePath": "C:\\Users\\olive\\OneDrive\\Dokumente\\GitHub\\gibbZeiterfassung2\\noSql\\CodeShareApi\\CodeShareApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\olive\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\olive\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
