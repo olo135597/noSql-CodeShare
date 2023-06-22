@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  api:
+    # Build the image from the Dockerfile
+    build: .
+    # Restart the container if it stops
+    restart: always
+    # Map port 5000 on the host to port 5000 in the container
+    ports:
+      - "5000:5000"
+    # Set environment variables for connecting to MongoDB
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+      - MONGO_CONNECTION_STRING=mongodb://root:example@mongo:27017
+      - MONGO_DATABASE_NAME=CodeShare
+
+  mongo:
+    # Use the official MongoDB image
+    image: mongo
+    # Restart the container if it stops
+    restart: always
+    # Map port 27017 on the host to port 27017 in the container
+    ports:
+      - "27017:27017"
+    # Set environment variables for MongoDB credentials and options
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+
+  mongo-express:
+    # Use the official Mongo Express image for web-based MongoDB management
+    image: mongo-express
+    # Restart the container if it stops
+    restart: always
+    # Map port 8081 on the host to port 8081 in the container
+    ports:
+      - "8081:8081"
+    # Set environment variables for connecting to MongoDB
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=example
+      - ME_CONFIG_MONGODB_SERVER=mongo
+
