@@ -14,11 +14,15 @@ namespace CodeShareApi.Controllers;
 public class UserController : ControllerBase
 {
     private readonly UserService _userService;
+    private readonly SnippetService _snippetService;
 
-    public UserController(UserService userService) =>
+
+    public UserController(UserService userService, SnippetService snippetService)
+    {
        _userService = userService;
+       _snippetService = snippetService;
 
-    
+    }
     [HttpGet]
     public async Task<List<User>> Get() =>
     await _userService.GetAsync();
@@ -117,12 +121,16 @@ string utcString = rightDateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
     [HttpDelete("{id:length(24)}")]
     public async Task<IActionResult> Delete(string id)
     {
+         var snippet = await _snippetService.GetUserAsync(id);
         var user = _userService.GetAsync(id);
 
         if (user is null)
         {
             return NotFound();
         }
+
+
+        await _snippetService.RemoveUserAsync(id);
 
         await _userService.RemoveAsync(id);
 

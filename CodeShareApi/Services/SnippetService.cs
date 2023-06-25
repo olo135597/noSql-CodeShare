@@ -38,6 +38,11 @@ public class SnippetService
         return await _snippets.Find(s => s.Id == id).FirstOrDefaultAsync();
     }
 
+    public async Task<Snippet> GetUserAsync(string userId)
+    {
+        return await _snippets.Find(s => userId == s.UserId).FirstOrDefaultAsync();
+    }
+
     // Get snippets by user id
     public async Task<List<Snippet>> GetByUserIdAsync(string uid)
     {
@@ -60,6 +65,11 @@ public class SnippetService
     public async Task RemoveAsync(string id)
     {
         await _snippets.DeleteOneAsync(s => s.Id == id);
+    }
+
+    public async Task RemoveUserAsync(string userId)
+    {
+        await _snippets.DeleteManyAsync(s => s.UserId == userId);
     }
 
     
