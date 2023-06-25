@@ -20,8 +20,6 @@ using MongoDB.Bson.Serialization.Attributes;
     [BsonElement("user_id")]
     public string UserId { get; set; }
 
-    [BsonElement("uid")]
-    public string Uid { get; set; }
 
     [BsonElement("content")]
     public string Content { get; set; } = null!;

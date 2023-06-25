@@ -66,6 +66,9 @@ public async Task<ActionResult<Snippet>> GetSnippet([FromRoute] string userId, [
 [HttpPost]
 public async Task<IActionResult> CreateSnippet([FromRoute] string userId, [FromBody] Snippet newSnippet)
 {
+
+    
+     
      // Check if the user exists
      var user = await _userService.GetAsync(userId);
 
@@ -124,6 +127,7 @@ public async Task<IActionResult> UpdateSnippet([FromRoute] string userId, [FromR
 {
      // Check if the user exists
      var user = await _userService.GetAsync(userId);
+   
 
      if (user is null)
      {
@@ -141,7 +145,7 @@ public async Task<IActionResult> UpdateSnippet([FromRoute] string userId, [FromR
      // Set the snippet id and user id for the updated snippet
      updatedSnippet.Id = snippet.Id;
      updatedSnippet.UserId = userId;
-
+     
      // Update the snippet
      await _snippetService.UpdateAsync(snippetId, updatedSnippet);
      

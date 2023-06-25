@@ -13,14 +13,16 @@ public class User
    
     public string Id { get; set; }
 
-    [BsonElement("uid")]
-    public string Uid { get; set; }
+
 
     [BsonElement("username")]
     public string Username { get; set; } = null!;
 
     [BsonElement("githubName")]
     public string GithubName { get; set; } 
+
+    [BsonElement("region")]
+    public string region { get; set; }
 
     [BsonElement("password")]
     public string Password { get; set; } = null!;

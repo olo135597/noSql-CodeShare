@@ -40,6 +40,8 @@ public class UserController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Post(User newUser)
     {
+
+        
         Random rnd = new Random();
 
 // Create a StringBuilder object
