@@ -2636,11 +2636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\olive\\OneDrive\\Dokumente\\VsCode\\CodeShareApi\\CodeShareApi.csproj",
+      "projectUniqueName": "C:\\Users\\olive\\OneDrive\\Dokumente\\GitHub\\gibbZeiterfassung2\\noSql\\CodeShareApi\\CodeShareApi.csproj",
       "projectName": "CodeShareApi",
-      "projectPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\VsCode\\CodeShareApi\\CodeShareApi.csproj",
+      "projectPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\GitHub\\gibbZeiterfassung2\\noSql\\CodeShareApi\\CodeShareApi.csproj",
       "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\VsCode\\CodeShareApi\\obj\\",
+      "outputPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\GitHub\\gibbZeiterfassung2\\noSql\\CodeShareApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
