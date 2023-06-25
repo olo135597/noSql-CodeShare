@@ -2,7 +2,7 @@ using CodeShareApi.Models;
 using CodeShareApi.Services;
 using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
+
 using System.Text;
 
 
@@ -59,7 +59,7 @@ for (int i = 0; i < 24; i++)
 string randomNumber = sb.ToString();
      newUser.Id = randomNumber;
 
-        await _userService.CreateAsync(newUser);
+        
          DateTime currentDateTimeUtc = DateTime.UtcNow;
 
 // Get the desired time zone
@@ -75,6 +75,7 @@ string utcString = rightDateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
     
 
      newUser.CreatedAt = utcString;
+    await _userService.CreateAsync(newUser);
         return CreatedAtAction(nameof(Get), new { id = newUser.Id}, newUser);
 
        
@@ -92,7 +93,7 @@ string utcString = rightDateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
 
         updatedUser.Id = user.Id;
 
-        await _userService.UpdateAsync(id, updatedUser);
+      
            DateTime currentDateTimeUtc = DateTime.UtcNow;
 
 // Get the desired time zone
@@ -107,6 +108,7 @@ string utcString = rightDateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
 
 
       updatedUser.CreatedAt = utcString;
+        await _userService.UpdateAsync(id, updatedUser);
         return NoContent();
     }
 
@@ -125,14 +127,5 @@ string utcString = rightDateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
         return NoContent();
     }
 
-    [AllowAnonymous]
-    [Route("authenticate")]
-    [HttpPost]
-    public ActionResult Login( [FromBody] User user)
-    {
-        var token = _userService.Authenticate(user.Username, user.Password);
-        if(token == null)
-           return Unauthorized();
-        return Ok(new {token, user});
-    }
+    
 }

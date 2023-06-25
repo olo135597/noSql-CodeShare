@@ -21,6 +21,7 @@ public class SnippetController : ControllerBase
 
     // Get all snippets for a user
     // Get all snippets for a user
+    
 [HttpGet]
 public async Task<ActionResult<List<Snippet>>> GetSnippets([FromRoute] string userId)
 {
@@ -110,6 +111,9 @@ string utcString = rightDateTime.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
 
 
      newSnippet.CreatedAt = utcString;
+     
+     // Save the new snippet to the database
+ await _snippetService.CreateAsync(newSnippet);
 
      return CreatedAtAction(nameof(GetSnippet), new { userId = userId, snippetId = newSnippet.Id }, newSnippet);
 }

@@ -16,7 +16,7 @@ public class UserService
 
     private readonly string key;
 
-    public UserService(IOptions<CodeShareDatabaseSettings> codeShareDatabaseSettings, IConfiguration configuration)
+    public UserService(IOptions<CodeShareDatabaseSettings> codeShareDatabaseSettings)
     {
        var mongoClient = new MongoClient(
             codeShareDatabaseSettings.Value.ConnectionString);
@@ -26,8 +26,6 @@ public class UserService
 
         _usersCollection = mongoDatabase.GetCollection<User>(
             codeShareDatabaseSettings.Value.UsersCollectionName);
-
-            this.key = configuration.GetSection("JwtKey").ToString();
         
     }
 
@@ -35,36 +33,7 @@ public class UserService
 
     
     
-    public string Authenticate(string username, string password)
-    {
-        var user = this._usersCollection.Find(x => x.Username == username && x.Password == password).FirstOrDefault();
-        if (user == null)
-        return null;
-
-        var tokenHandler = new JwtSecurityTokenHandler();
-
-        var tokenKey = Encoding.ASCII.GetBytes(key);
-
-        var tokenDescriptor = new SecurityTokenDescriptor(){
-
-        Subject = new ClaimsIdentity(new Claim[] {
-            new Claim(ClaimTypes.Name, username),
-        }),
-
-        Expires = DateTime.UtcNow.AddHours(1),
-
-        SigningCredentials = new SigningCredentials (
-             new SymmetricSecurityKey(tokenKey),
-             SecurityAlgorithms.HmacSha256Signature
-        )
-
-        };
-
-        var token = tokenHandler.CreateToken(tokenDescriptor);
-        return tokenHandler.WriteToken(token);
-
-    }
-
+   
 
 
     public async Task<List<User>> GetAsync() =>

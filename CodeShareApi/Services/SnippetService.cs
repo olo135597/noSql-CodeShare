@@ -2,11 +2,15 @@ using CodeShareApi.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
+
+
+
 namespace CodeShareApi.Services;
 
 public class SnippetService
 {
     private readonly IMongoCollection<Snippet> _snippets;
+
 
     public SnippetService(IOptions<CodeShareDatabaseSettings> codeShareDatabaseSettings)
     {

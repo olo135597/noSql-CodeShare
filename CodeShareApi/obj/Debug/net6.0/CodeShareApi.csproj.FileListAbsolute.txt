@@ -96,3 +96,13 @@ C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\o
 C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\CodeShareApi.pdb
 C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\CodeShareApi.genruntimeconfig.cache
 C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\ref\CodeShareApi.dll
+C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.CodeShareApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.build.CodeShareApi.props
+C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CodeShareApi.props
+C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CodeShareApi.props
+C:\Users\olive\OneDrive\Dokumente\GitHub\gibbZeiterfassung2\noSql\CodeShareApi\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\olive\OneDrive\Dokumente\VsCode\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.CodeShareApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\olive\OneDrive\Dokumente\VsCode\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.build.CodeShareApi.props
+C:\Users\olive\OneDrive\Dokumente\VsCode\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CodeShareApi.props
+C:\Users\olive\OneDrive\Dokumente\VsCode\CodeShareApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CodeShareApi.props
+C:\Users\olive\OneDrive\Dokumente\VsCode\CodeShareApi\obj\Debug\net6.0\staticwebassets.pack.json

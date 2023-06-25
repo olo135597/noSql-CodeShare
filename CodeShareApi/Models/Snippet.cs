@@ -33,7 +33,7 @@ using MongoDB.Bson.Serialization.Attributes;
     public string Language { get; set; } = null!;
 
     [BsonElement("created_at")]
-    public String CreatedAt { get; set; } 
+    public String CreatedAt { get; set; } = null!;
 }
 
 

@@ -2636,11 +2636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\olive\\OneDrive\\Dokumente\\GitHub\\gibbZeiterfassung2\\noSql\\CodeShareApi\\CodeShareApi.csproj",
+      "projectUniqueName": "C:\\Users\\olive\\OneDrive\\Dokumente\\VsCode\\CodeShareApi\\CodeShareApi.csproj",
       "projectName": "CodeShareApi",
-      "projectPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\GitHub\\gibbZeiterfassung2\\noSql\\CodeShareApi\\CodeShareApi.csproj",
+      "projectPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\VsCode\\CodeShareApi\\CodeShareApi.csproj",
       "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\GitHub\\gibbZeiterfassung2\\noSql\\CodeShareApi\\obj\\",
+      "outputPath": "C:\\Users\\olive\\OneDrive\\Dokumente\\VsCode\\CodeShareApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2656,6 +2656,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2714,7 +2715,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
